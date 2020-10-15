@@ -1,12 +1,32 @@
 {
-  "name": "lottery",
-  "displayName": "lottery",
+  "name": "Lottery Number Generator",
+  "displayName": "Lottery Number Generator",
   "expo": {
-    "name": "lottery",
-    "slug": "lottery",
+    "name": "Lottery Number Generator",
+    "slug": "lottery-number-generator",
+    "privacy": "public",
     "version": "1.0.0",
+    "icon": "./Assets/Icons/1024.png",
+    "splash": {
+      "image": "./Assets/Icons/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#08903c"
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "orientation": "portrait",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "bundleIdentifier": "com.resumeapps.lotterygenerator",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.resumeapps.lottery_generator",
+      "versionCode": 1
+    }
   }
 }
