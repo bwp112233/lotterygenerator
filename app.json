@@ -5,7 +5,7 @@
     "name": "Lottery Number Generator",
     "slug": "lottery-number-generator",
     "privacy": "public",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "./Assets/Icons/1024.png",
     "splash": {
       "image": "./Assets/Icons/splash.png",
@@ -22,11 +22,11 @@
     ],
     "ios": {
       "bundleIdentifier": "com.resumeapps.lotterygenerator",
-      "buildNumber": "1.0.0"
+      "buildNumber": "1.0.1"
     },
     "android": {
       "package": "com.resumeapps.lottery_generator",
-      "versionCode": 1
+      "versionCode": 2
     }
   }
 }

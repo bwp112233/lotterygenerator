@@ -9,12 +9,28 @@ const GameScreen = (props) => {
     const [mega, setMega] = useState([]);
 
     const pick = () => {
+
         const arr = [];
-        for (let i = 0; i < game; i++) {
-            const num = <Number key={i} num={Math.ceil(Math.random() * maxNum)} />;
-            arr.push(num);
+        if (megaBall === false) {
+            for (let i = 0; i < game; i++) {
+                const num = Math.ceil(Math.random() * maxNum);
+                arr.push(num);
+            }
+            setNums(arr);
+        } else {
+            while (arr.length < game) {
+                const r = Math.ceil(Math.random() * maxNum);
+                if (arr.includes(r)) {
+                    continue;
+                } else {
+                    arr.push(r);
+                }
+                arr.length === game && setNums(arr);
+                console.log(nums);
+            }
+
         }
-        setNums(arr);
+        // setNums(arr);
         megaBall === true && setMega([<Megaball key={1} num={Math.ceil(Math.random() * megaMax)} />])
     }
 
@@ -24,7 +40,9 @@ const GameScreen = (props) => {
                 {nums.length === 0 && <View style={styles.cash}>
                     <Text style={styles.cashText}>$</Text></View>}
                 <View style={styles.numContainer}>
-                    {nums}
+                    {nums.length > 0 && nums.map((e, i) => {
+                        return <Number key={i} num={nums[i]} />
+                    })}
                 </View>
                 {mega.length > 0 && <View style={styles.megaHeader}><Text style={styles.megaText}>{ballName}:</Text></View>}
                 {megaBall === true && <View style={styles.numContainer}>
